@@ -1,0 +1,15 @@
+.cartList {
+  list-style: none;
+  width: 500px;
+  height: 600px;
+  padding: 30px;
+  background-color: #ffffff94;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2em;
+  }
+}
