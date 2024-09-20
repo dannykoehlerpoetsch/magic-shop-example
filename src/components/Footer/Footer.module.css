@@ -1,0 +1,8 @@
+.footer {
+    text-align: center;
+    font-family: hogwarts;
+    color: gold;
+    font-size: 1.5rem;
+    background-color: rgba(0,0,0,0.5);
+    padding: 0.5em 0;
+}
