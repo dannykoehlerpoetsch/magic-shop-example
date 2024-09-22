@@ -32,26 +32,37 @@ export default function Cart() {
   };
 
   return (
-    <section>
-      <h2>Your Cart</h2>
+    <section className={styles.cartSection}>
+      <h2 className={styles.cartHeading}>Your Cart</h2>
       <ul className={styles.cartList}>
         {cartItems.map((item, index) => (
           <li key={index}>
             <div>
               <h4>{item.name}</h4>
               <span>
-                Quantity: {item.quantity}{" "}
-                <button onClick={() => incrementQuantity(item.id)}>+</button>
-                <button onClick={() => decrementQuantity(item.id)}>-</button>
-                <button onClick={() => removeItem(item.id)}>X</button>
-                <h4>single Price: {item.price}</h4>
-                <h4>total Price Item: {item.price * item.quantity}</h4>
+                <div>
+                  <button onClick={() => incrementQuantity(item.id)}>+</button>
+                  <span>{item.quantity} </span>
+                  <button onClick={() => decrementQuantity(item.id)}>-</button>
+                  <button onClick={() => removeItem(item.id)}>remove</button>
+                </div>
+                <div>
+                  <h4>
+                    single price: <span>{item.price.toFixed(2)}</span>
+                  </h4>
+                  <h4>
+                    total price Item:{" "}
+                    <span>{(item.price * item.quantity).toFixed(2)}</span>
+                  </h4>
+                </div>
               </span>
             </div>
           </li>
         ))}
       </ul>
-      <h4>Total: {calculateTotalPrice()}</h4>
+      <h4 className={styles.cartTotal}>
+        cart total: <span>{calculateTotalPrice().toFixed(2)}€</span>
+      </h4>
     </section>
   );
 }

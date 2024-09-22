@@ -2,3 +2,29 @@ header {
   height: 80px;
   width: 100%;
 }
+
+.constructionSpan {
+  background-color: red;
+  color: white;
+  display: block;
+  text-align: center;
+  padding: 1em 0;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+}
+
+.constructionSpan span {
+  display: inline-block;
+  position: absolute;
+  animation: banner 8s linear infinite;
+}
+
+@keyframes banner {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
