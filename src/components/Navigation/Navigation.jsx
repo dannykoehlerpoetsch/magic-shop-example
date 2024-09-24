@@ -9,9 +9,6 @@ export default function Navigation() {
     <nav className={styles.nav}>
       <ul className={styles.navList}>
         <li className={styles.listItem}>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li className={styles.listItem}>
           <NavLink to="/shop">Shop</NavLink>
         </li>
         <li className={styles.listItem}>

@@ -11,7 +11,7 @@ export default function Shop() {
   };
   return (
     <section className={styles.shop}>
-      <h2 className={styles.shopHeader}>Shop</h2>
+      <h2 className={styles.shopHeader}>Our Products</h2>
       <section className={styles.cardWrapper}>
         {magicShopItems.map((item) => (
           <div key={item.id} className={styles.shopCard}>
