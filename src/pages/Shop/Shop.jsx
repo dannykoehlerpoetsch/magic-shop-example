@@ -1,14 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import styles from "./Shop.module.css";
 import { magicShopItems } from "../../products";
+import { useContext } from "react";
 import { CartContext } from "../../context/CartContext";
 
-export default function Shop() {
+const Shop = () => {
   const { dispatch, cartItems } = useContext(CartContext);
 
   const addItem = (item) => {
     dispatch({ type: "ADD_ITEM", payload: item });
   };
+
   return (
     <section className={styles.shop}>
       <h2 className={styles.shopHeader}>Our Products</h2>
@@ -29,4 +31,6 @@ export default function Shop() {
       </section>
     </section>
   );
-}
+};
+
+export default Shop;
