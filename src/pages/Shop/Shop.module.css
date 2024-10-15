@@ -16,7 +16,7 @@
 
 .cardWrapper {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+
   gap: 20px;
   width: 100%;
   margin: 0 0 20px;
@@ -28,13 +28,13 @@
 
 @media (min-width: 1024px) {
   .cardWrapper {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 @media (max-width: 1023px) {
   .cardWrapper {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
